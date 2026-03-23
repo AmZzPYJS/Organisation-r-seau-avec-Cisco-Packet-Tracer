@@ -1,107 +1,70 @@
-# Organisation-r-seau-avec-Cisco-Packet-Tracer
-Utilisation de Cisco Packet Tracer afin de modéliser un reseau comportant des PC et des switch, et vérification de la bonne communication entre deux PC d'un même réseau.
+# 🌐 Organisation réseau & VLAN – Cisco Packet Tracer
 
-Ce projet m'a permis de comprendre comment s'organise un réseau et comment communiquent les pc d'un même réseau entre eux.
+## 📌 Présentation
+Ce projet regroupe deux TPs réalisés en L3 Informatique sur Cisco Packet Tracer.  
+Il couvre les bases de la configuration réseau (switch) ainsi que des notions avancées : VLAN, ARP et routage.
 
-Pour faire un résumé du projet mais (toutes les étapes sont détaillé dans le fichier pdf ennoncé) :
+---
 
-Lorsqu’on met en service un switch, certaines op´erations sont essentielles.
+## 🎯 Objectifs
+- Configurer un switch (sécurisation, accès, gestion)
+- Vérifier la communication entre machines d’un même réseau
+- Mettre en place des VLAN et un trunk
+- Comprendre le protocole ARP
+- Configurer le routage entre réseaux
 
-• Changez le nom du switch
+---
 
-Permet d’identifier clairement l’´equipement dans le r´eseau.
+## 🔧 Configuration de base (Switch)
+- Changement du nom du switch  
+- Sécurisation des accès (console, VTY, enable)  
+- Chiffrement des mots de passe  
+- Attribution d’une IP de gestion (interface VLAN)  
 
-• Prot´eger l’acc`es console
+→ Permet une administration sécurisée du réseau
 
-Empˆecher un acc`es phusique non autoris´e.
+---
 
-• Prot´eger l’acc`es distant (VTY)
+## 🧩 Partie avancée
+### VLAN
+- VLAN 10 / VLAN 20  
+→ Isolation des machines  
 
-Permet la gestion `a distance (Telnet ou SSH).
+### Trunk
+- Lien inter-switch (802.1Q)  
+→ Transport des VLAN  
 
-• Prot´eger le mode privil´egi´e
+### ARP
+- Résolution IP → MAC  
+→ Broadcast puis unicast  
 
-S´ecuriser la commande enable.
+### Routage
+- Réseaux : 10.1.0.0/16 et 10.2.0.0/16  
+- Communication assurée via routeur (gateway)
 
-• Chiffre les mots de passe
+---
 
-Eviter qu’ils apparaissent en clair dans la configuration. ´
+## 📊 Résultats
+- Communication OK dans un même réseau / VLAN  
+- Isolation entre VLAN sans routage  
+- Communication entre réseaux avec routeur  
 
-• Configurer une adresse IP de gestion
+---
 
-Donner une adresse au switch (via une interface VLAN). Il n’est pas obligatoire
-d’utiliser le VLAN 1, et il est mˆeme recommand´e d’utiliser un autre VLAN pour la
-gestion.
+## 📁 Contenu
+- Fichier Packet Tracer (topologie finale)  
+- PDF du TP  
+- Dossier screens (étapes clés)
 
-Pour vous aider à comprendre comment j'ai fait mon projet, le fichier TP2_reseau donne accès au résultats final et les screens dans le dossier screen sont selon moi les étapes les plus importantes. Avec branchements des équipements, configuration des adresses MAC de chaque équipement, configuration des switch, vérification de la communication intra-équipement notamment en testant dans le cmd prompt d'un PC le ping qu'il a avec un autre PC du même réseau.
+---
 
-🌐 TP Réseaux – VLAN, ARP et Routage
+## 🧠 Compétences acquises
+- Configuration réseau Cisco (CLI)  
+- Segmentation réseau (VLAN)  
+- Fonctionnement ARP  
+- Routage IP  
 
-📌 Présentation
+---
 
-TP réalisé en L3 Informatique sur Cisco Packet Tracer pour comprendre les bases des réseaux : segmentation (VLAN), communication locale (ARP) et routage.
-
-⸻
-
-🎯 Objectifs
-    •    Configurer des VLAN
-    •    Mettre en place un trunk
-    •    Comprendre ARP
-    •    Configurer le routage entre deux réseaux
-
-⸻
-
-🧩 Topologie
-    •    2 switches
-    •    Plusieurs PC
-    •    1 routeur
-    •    2 réseaux : 10.1.0.0/16 et 10.2.0.0/16
-
-⸻
-
-🔧 Étapes
-
-VLAN
-    •    VLAN 10 et VLAN 20
-    •    Isolation des machines
-→ Pas de communication entre VLAN
-
-Trunk
-    •    Lien entre switches en 802.1Q
-→ Les VLAN circulent entre switches
-
-ARP
-    •    Résolution IP → MAC
-→ Requête broadcast, réponse unicast
-
-Routage
-    •    Configuration du routeur :
-    
-interface g0/0
-ip address 10.1.255.254 255.255.0.0
-
-interface g0/1
-ip address 10.2.255.254 255.255.0.0
-
-→ Communication entre réseaux OK via gateway
-
-⸻
-
-📊 Résultats
-    •    Ping OK dans un même VLAN
-    •    Ping KO entre VLAN sans routeur
-    •    Ping OK entre réseaux avec routage
-
-⸻
-
-🧠 Compétences acquises
-    •    Segmentation réseau (VLAN)
-    •    Fonctionnement ARP
-    •    Configuration Cisco CLI
-    •    Routage IP
-
-⸻
-
-👤 Auteur
-
+## 👤 Auteur
 Amin Mezouer – L3 Informatique (UVSQ)
